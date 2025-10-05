@@ -1,8 +1,12 @@
 import React from 'react'
+import HeaderComponent from './HeaderComponent'
 
 function HomePage() {
 	return (
-		<div>HomePage</div>
+		<>
+			<HeaderComponent text='Главная страница'/>
+			<HeaderComponent text='Hue'/>
+		</>
 	)
 }
 

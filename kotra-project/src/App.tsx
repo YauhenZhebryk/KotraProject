@@ -44,7 +44,7 @@ function App() {
 								]}
 							/>
 
-			<div className="min-h-screen flex items-center justify-center bg-gray-50">
+			<div className="min-h-screen flex items-center justify-center bg-main-bg text-main-text bg-main-orange">
       <FormReservation
         botToken="8026210892:AAF6z8RLg907SflGFk6PkldPa54ZUnxxRRc"
         chatId="-1003020709281" 

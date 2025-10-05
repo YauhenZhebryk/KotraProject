@@ -3,6 +3,16 @@
 @source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "KyivTypeSerif";
+  src: url("/src/assets/fonts/KyivTypeSerif-VarGX.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "KyivTypeSerif", serif;
+}
 
 @theme {
   --color-main-text: #100D0A;

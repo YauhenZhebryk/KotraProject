@@ -6,6 +6,8 @@ import img1 from './assets/images/IMG_8163 1.png';
 import img2 from './assets/images/IMG_9407 1.png';
 import img3 from './assets/images/IMG_9532 2.png';
 import SimpleImgSwapper from './components/SimpleImgSwapper';
+import FormReservation from './components/FormResevation';
+
 
 function App() {
 	const images : { id: number; img: string }[] = [
@@ -36,8 +38,18 @@ function App() {
 									{ src: img1, alt: 'IMG_8163' },
 									{ src: img2, alt: 'IMG_9407' },
 									{ src: img3, alt: 'IMG_9532' },
+									{ src: img1, alt: 'IMG_8163' },
+									{ src: img2, alt: 'IMG_9407' },
+									{ src: img3, alt: 'IMG_9532' },
 								]}
 							/>
+
+			<div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <FormReservation
+        botToken="8026210892:AAF6z8RLg907SflGFk6PkldPa54ZUnxxRRc"
+        chatId="-1003020709281" 
+      />
+    </div>
 		
     </>
   )

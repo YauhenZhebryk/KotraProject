@@ -6,7 +6,6 @@
 @font-face {
   font-family: "KyivTypeSerif";
   src: url("/src/assets/fonts/KyivTypeSerif-VarGX.ttf") format("truetype");
-  /* variable font: expose the full weight range so utilities like font-light (300) work */
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;

@@ -10,7 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@heroui/react": "^2.8.4",
+    "@react-spring/web": "^10.0.3",
     "framer-motion": "^12.23.22",
     "motion": "^12.23.22",
     "react": "^19.1.1",

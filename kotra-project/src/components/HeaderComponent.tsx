@@ -1,4 +1,4 @@
-import kotraLogo from '../assets/images/cortraBlackLogo.png'
+import kotraLogo from '../assets/images/kotraBlackLogo.png'
 import { Link, NavLink } from 'react-router-dom'
 
 function HeaderComponent() {

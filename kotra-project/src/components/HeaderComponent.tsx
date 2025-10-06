@@ -17,7 +17,7 @@ function HeaderComponent() {
 							<NavLink to="/reservation" className={({ isActive }) => isActive ? 'underline' : ''} end>Бронирование</NavLink>
 						</li>
 						<li className='hover:text-main-orange transition-all'>
-							<Link to="/">Отзывы</Link>
+							<NavLink to="/review" className={({ isActive }) => isActive ? 'underline' : ''} >Отзывы</NavLink>
 						</li>
 						<li className='hover:text-main-orange transition-all'>
 							<Link to="/">Контакт</Link>

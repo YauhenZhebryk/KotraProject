@@ -1,7 +1,9 @@
 import PlaceShortInformation from './PlaceShortInformation'
-import img1 from '../assets/images/IMG_8163 1.png'
-import img2 from '../assets/images/IMG_9407 1.png'
-import img3 from '../assets/images/IMG_9532 2.png'
+import img1 from '../assets/images/sauna.png'
+import img2 from '../assets/images/banketnyi_zal.png'
+import img3 from '../assets/images/main_house.png'
+
+
 
 function AllPlacesMainPage() {
 	return (

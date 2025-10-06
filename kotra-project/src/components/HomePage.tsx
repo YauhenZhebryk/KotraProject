@@ -10,9 +10,9 @@ import CommentSection from './CommentSection'
 function HomePage() {
 	return (
 		<>
-			<PlaceNavigation />
 			<HeaderComponent />
 			<div className='w-full pl-5 pr-5'>
+				<PlaceNavigation />
 				<AllPlacesMainPage />
 				<CommentSection />
 			</div>

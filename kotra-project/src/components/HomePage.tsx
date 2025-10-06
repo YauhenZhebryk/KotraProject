@@ -1,11 +1,13 @@
-import React from 'react'
-import HeaderComponent from './HeaderComponent'
+
+import PlaceNavigation from './PlaceNavigation'
+
+
+
 
 function HomePage() {
 	return (
 		<>
-			<HeaderComponent text='Главная страница'/>
-			<HeaderComponent text='Hue'/>
+			<PlaceNavigation />
 		</>
 	)
 }

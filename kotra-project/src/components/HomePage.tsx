@@ -1,3 +1,7 @@
+
+import PlaceNavigation from './PlaceNavigation'
+
+
 import HeaderComponent from './HeaderComponent'
 import PlaceShortInformation from './PlaceShortInformation'
 import img1 from '../assets/images/IMG_8163 1.png'
@@ -8,6 +12,7 @@ import img3 from '../assets/images/IMG_9532 2.png'
 function HomePage() {
 	return (
 		<>
+			<PlaceNavigation />
 			<HeaderComponent />
 			<div className='w-full pl-5 pr-5'>
 			<PlaceShortInformation

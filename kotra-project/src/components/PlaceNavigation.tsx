@@ -9,12 +9,12 @@ import TerritoryaNav from '../assets/images/sauna.png'
 
 function PlaceNavigation() {
   return (
-	<>
+	<div className='my-5'>
 		<PlaceCard text="Гостевой дом" img={HouseNav} choice='l'/>
 		<PlaceCard text="Банный комплекс" img={BanyaNav} choice='r'/>
 		<PlaceCard text="Банкетный зал" img={ZalNav} choice='l'/>
 		<PlaceCard text="Территория" img={TerritoryaNav} choice='r'/>
-	</>
+	</div>
   )
 }
 

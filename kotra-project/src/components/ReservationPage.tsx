@@ -11,6 +11,7 @@ function ReservationPage() {
 				
 				<form action="" className="flex gap-5 flex-col">
 				<InputComponent text="Имя"/>
+				<InputComponent text="Имя"/>
 				</form>
 			</div>
 		</>

@@ -1,7 +1,5 @@
 
 import PlaceNavigation from './PlaceNavigation'
-
-
 import HeaderComponent from './HeaderComponent'
 import AllPlacesMainPage from './AllPlacesMainPage'
 import CommentSection from './CommentSection'

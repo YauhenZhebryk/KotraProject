@@ -1,10 +1,9 @@
 
 import PlaceNavigation from './PlaceNavigation'
-
-
 import HeaderComponent from './HeaderComponent'
 import AllPlacesMainPage from './AllPlacesMainPage'
 import CommentSection from './CommentSection'
+import Footer from './Footer'
 
 
 function HomePage() {
@@ -16,6 +15,7 @@ function HomePage() {
 				<AllPlacesMainPage />
 				<CommentSection />
 			</div>
+			<Footer />
 		</>
 	)
 }

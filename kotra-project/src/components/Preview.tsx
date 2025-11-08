@@ -5,6 +5,7 @@ import BanyaNav from "../assets/images/sauna.png";
 import ZalNav from "../assets/images/banketnyi_zal.png";
 import TerritoryaNav from "../assets/images/sauna.png";
 
+
 function PlaceNavigation() {
   return (
     <div className="p-6">

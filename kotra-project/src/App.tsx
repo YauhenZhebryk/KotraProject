@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
 				<Route path="/reservation" element={<ReservationPage />} />
 				<Route path="/review" element={<ReviewPage />} />
-				<Route path="/guest_house" element={<PlacePage name="Гостевой дом" info="ЛАЛАЛА" />} />
+				<Route path="/guest_house" element={<PlacePage id="" name="Гостевой дом" info="ЛАЛАЛА" />} />
 				{/* <Route path="/bath_house" element={<Bath_house />} />
 				<Route path="/banquet_hall" element={<Banquet_hall />} />
 				<Route path="/territory" element={<Territory />} /> */}

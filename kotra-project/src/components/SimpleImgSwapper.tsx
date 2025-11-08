@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 interface SimpleImgSwapperProps {
   images?: Array<string | { src: string; alt?: string }>;
-  width?: number;
-  height?: number;
+  width?: string;
+  height?: string;
   animationSpeed?: number;
 }
 
@@ -14,7 +14,7 @@ const defaultImages = [
   { src: 'https://images.unsplash.com/photo-1452626212852-811d58933cae?q=80&w=500&auto=format', alt: 'Lake' },
 ];
 
-export default function SimpleImgSwapper({ images = defaultImages, width = 400, height = 300, animationSpeed = 0.3 }: SimpleImgSwapperProps) {
+export default function SimpleImgSwapper({ images = defaultImages, width = '400', height = '300', animationSpeed = 0.3 }: SimpleImgSwapperProps) {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
 

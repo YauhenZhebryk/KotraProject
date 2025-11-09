@@ -20,6 +20,7 @@ function ReservationForm() {
 
   const [message, setMessage] = useState<string | null>(null); // Текст сообщения
   const [statusType, setStatusType] = useState<StatusType>('idle'); // Тип сообщения для стилизации
+	const [messageType, setMessageType] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -29,20 +30,26 @@ function ReservationForm() {
       ...prev,
       [name]: value,
     }));
-    // Очищаем сообщение об ошибке при изменении поля
     if (message && statusType === 'error') {
       setMessage(null);
+			setMessageType(null);
       setStatusType('idle');
     }
   };
 
   const validate = () => {
-    if (!formData.name.trim() || formData.name.length < 2)
+    if (!formData.name.trim() || formData.name.length < 2){
+			setMessageType('name')
       return 'Введите корректное имя (не менее 2 символов)';
-    if (!formData.phone.trim() || !/^\+?\d{7,15}$/.test(formData.phone))
+		}
+    if (!formData.phone.trim() || !/^\+?\d{7,15}$/.test(formData.phone)){
+			setMessageType('phone')
       return 'Введите корректный номер телефона (например, +79XXXXXXXXX)';
-    if (!formData.description.trim() || formData.description.length < 5)
+		}
+    if (!formData.description.trim() || formData.description.length < 5){
+			setMessageType('description');
       return 'Введите описание заявки (не менее 5 символов)';
+		}
     return null;
   };
 
@@ -57,7 +64,7 @@ function ReservationForm() {
     }
 
     setMessage('Отправляем данные...');
-    setStatusType('loading'); // Устанавливаем тип "загрузка"
+    setStatusType('loading');
 
     try {
       const response = await fetch('http://localhost:5000/api/reservation', {
@@ -69,7 +76,7 @@ function ReservationForm() {
       });
 
       if (response.ok) {
-        setMessage('✅ Заявка успешно отправлена!');
+        setMessage('Заявка успешно отправлена!');
         setStatusType('success'); // Устанавливаем тип "успех"
         setFormData({
           name: '',
@@ -79,21 +86,19 @@ function ReservationForm() {
       } else {
         const data = await response.json();
         setMessage(`❌ Ошибка: ${data.message || 'Не удалось отправить'}`);
-        setStatusType('error'); // Устанавливаем тип "ошибка"
+        setStatusType('error');
       }
     } catch (error) {
       setMessage('❌ Произошла ошибка при соединении с сервером. Попробуйте позже.');
-      setStatusType('error'); // Устанавливаем тип "ошибка"
+      setStatusType('error'); 
       console.error(error);
     }
   };
 
-  // Функция для определения CSS класса в зависимости от statusType
   const getStatusClass = (type: StatusType) => {
     switch (type) {
-      case 'error':
-        return 'status-error'; // Если используете обычный CSS
-        // return 'bg-red-100 text-red-700 border border-red-700'; // Если используете Tailwind CSS
+      case 'error':  return 'status-error'; // Если используете обычный CSS
+        return 'bg-red-100 text-red-700 border border-red-700'; // Если используете Tailwind CSS
       case 'success':
         return 'status-success'; // Если используете обычный CSS
         // return 'bg-green-100 text-green-700 border border-green-700'; // Если используете Tailwind CSS
@@ -112,12 +117,14 @@ function ReservationForm() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
+								errorMessage={messageType === 'name' ? message : null}
             />
 			<InputComponent
                 text="Телефон"
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
+								errorMessage={messageType === 'phone' ? message : null}
             />
 			<InputComponent
                 text="Описание заявки"
@@ -125,14 +132,15 @@ function ReservationForm() {
                 name="description"
                 value={formData.description}
                 onChange={handleChange}
+								errorMessage={messageType === 'description' ? message : null}
+								
             />
 			<MainButton
                 text={statusType === 'loading' ? 'Отправка...' : 'Отправить'}
                 type="submit"
-                disabled={statusType === 'loading'} // Отключаем кнопку во время отправки
+                disabled={statusType === 'loading'}
             />
 
-            {/* Блок для вывода сообщений статуса */}
             {message && (
                 <div className={`status-message ${getStatusClass(statusType)}`}>
                     {message}

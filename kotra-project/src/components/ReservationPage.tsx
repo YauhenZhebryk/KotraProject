@@ -1,6 +1,5 @@
 import HeaderComponent from "./HeaderComponent";
-import InputComponent from "./InputComponent";
-import MainButton from "./MainButton";
+import ReservationForm from "./ReservationForm";
 import Footer from "./Footer";
 import { useEffect } from "react";
 

@@ -1,6 +1,4 @@
 import DottedLine from './DottedLine'
-import Masonry from './Masonry'
-import { useNavigate } from 'react-router-dom'
 
 interface PlaceFullInformationProps {
     id : string

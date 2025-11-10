@@ -1,4 +1,5 @@
 import DottedLine from './DottedLine'
+import { useNavigate } from 'react-router-dom'
 
 interface PlaceFullInformationProps {
     id : string
@@ -24,7 +25,7 @@ function PlaceFullInformation({ id, name, info}: PlaceFullInformationProps) {
                 <button
                     type="button"
                     onClick={() => navigate(-1)}
-                    className="cursor-pointer w-full lg:w-1/2 px-6 py-2 border-2 text-main-text border-main-orange rounded-lg hover:bg-gray-300 transition"
+                    className="cursor-pointer w-full lg:w-1/2 px-6 py-2 border-2 text-main-text border-main-orange rounded-lg hover:bg-footer-bg transition"
                 >
                     Вернуться к просмотру
                 </button>

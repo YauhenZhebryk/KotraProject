@@ -2,6 +2,7 @@ import DottedLine from './DottedLine'
 import ImageStack from './ImageStack';
 import MainButton from './MainButton';
 import SimpleImgSwapper from './SimpleImgSwapper';
+import { ImageSlider } from './ImageSlider';
 
 interface PlaceShortInformationProps {
 	side: string
@@ -54,7 +55,7 @@ function PlaceShortInformation({ side, id, name, info, images = myImages, linkto
 							<ImageStack images={images} width='300px' height='300px' rotation={5} scaleFactor={0.95}/>
 						</div>
 						<div className='hidden lg:block'>						
-							<SimpleImgSwapper images={images} width='400px' height='400px' animationSpeed={0.5}/>
+							<ImageSlider images={images}/>
 						</div>
 					</div>
 
@@ -85,7 +86,7 @@ function PlaceShortInformation({ side, id, name, info, images = myImages, linkto
 							<ImageStack images={images} width='300px' height='300px' rotation={5} scaleFactor={0.95}/>
 						</div>
 						<div className='hidden lg:block order-2 lg:order-1'>						
-							<SimpleImgSwapper images={images} width='400px' height='400px' animationSpeed={0.5}/>
+							<ImageSlider images={images}/>
 						</div>
 					</div>					
 				</div>

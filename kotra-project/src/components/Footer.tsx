@@ -3,6 +3,7 @@ import PhoneLogo from "../assets/images/phone.svg"
 import GeoLogo from "../assets/images/geo.svg"
 
 
+
 function Footer() {
 	  return (
 		

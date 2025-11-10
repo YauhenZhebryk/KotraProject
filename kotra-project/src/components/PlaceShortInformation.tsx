@@ -1,8 +1,10 @@
 import DottedLine from './DottedLine'
 import ImageStack from './ImageStack';
 import MainButton from './MainButton';
+import SimpleImgSwapper from './SimpleImgSwapper';
 
 interface PlaceShortInformationProps {
+	id: string
 	name: string
 	info: string
 	linkto: string
@@ -36,21 +38,35 @@ const ChevronSvg = () => (
   </svg>
 );
 
-function PlaceShortInformation({ name, info, images = myImages, linkto }: PlaceShortInformationProps) {
+function PlaceShortInformation({ id, name, info, images = myImages, linkto }: PlaceShortInformationProps) {
 
 
-	return (
-		<div className='my-8'>
-			<DottedLine />
-			<h2 className="text-4xl font-medium my-8 text-center">{name}</h2>
-			<DottedLine />
-			<div className="flex justify-center items-center mt-10">
-				<ImageStack images={images} width='300px' height='300px' rotation={5} scaleFactor={0.95}/>
-			</div>
-			<p className="text-[20px] text-main-text mt-4 leading-7">{info}</p>
-					<MainButton linkto={linkto} text='Узнать больше' image={<ChevronSvg />} />
-		</div>
-	)
+    return (
+        <div className='my-32'>
+            <DottedLine />
+            <h2 id={id} className="text-4xl font-medium my-8 text-center">{name}</h2>
+            <DottedLine />
+
+            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-10 mt-10">
+
+                <div className="w-full lg:w-1/2 flex justify-center">
+					<div className='block lg:hidden'>						
+                    	<ImageStack images={images} width='300px' height='300px' rotation={5} scaleFactor={0.95}/>
+					</div>
+					<div className='hidden lg:block'>						
+                    	<SimpleImgSwapper images={images} width='400px' height='400px' animationSpeed={0.5}/>
+					</div>
+                </div>
+
+                <div className="w-full lg:w-1/2">
+                    <p className="text-[20px] text-main-text mt-4 leading-7">{info}</p>
+                    <div className="mt-6">
+                        <MainButton linkto={linkto} text='Узнать больше' image={<ChevronSvg />} />
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default PlaceShortInformation

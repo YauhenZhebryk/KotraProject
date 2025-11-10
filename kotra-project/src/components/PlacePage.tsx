@@ -3,16 +3,17 @@ import Footer from "./Footer"
 import PlaceFullInformation from "./PlaceFullInformation"
 
 type PlaceProps = {
+	id : string
 	name : string;
 	info : string;
 	img? : Array<string>;
 }
 
-function PlacePage ({name, info, img}: PlaceProps) {
+function PlacePage ({id, name, info, img}: PlaceProps) {
   return (
 	<div>
 		<HeaderComponent />
-		<PlaceFullInformation name={name} info={info} img={img} />
+		<PlaceFullInformation id={id} name={name} info={info} img={img} />
 		<Footer />
 	</div>
   )

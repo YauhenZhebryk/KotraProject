@@ -15,14 +15,12 @@ function HeaderComponent() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.innerWidth >= 1024) { 
         if (window.scrollY > lastScrollY) {
           setShowHeader(false);
         } else {
           setShowHeader(true);
         }
         setLastScrollY(window.scrollY);
-      }
     };
 
     window.addEventListener("scroll", handleScroll);

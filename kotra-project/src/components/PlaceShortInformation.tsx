@@ -75,7 +75,7 @@ function PlaceShortInformation({ side, id, name, info, images = myImages, linkto
 				<h2 id={id} className="text-4xl font-medium my-8 text-center">{name}</h2>
 				<DottedLine />
 			
-				<div className="flex flex-col lg:flex-row items-start lg:items-center gap-10 mt-10">
+				<div className="flex flex-col-reverse lg:flex-row items-start lg:items-center gap-10 mt-10">
 					<div className="w-full lg:w-1/2">
 						<p className="text-[20px] text-main-text mt-4 leading-7">{info}</p>
 					</div>

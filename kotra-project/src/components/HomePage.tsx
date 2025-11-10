@@ -6,7 +6,6 @@ import CommentSection from './CommentSection'
 import Footer from './Footer'
 import Preview from './Preview'
 
-
 function HomePage() {
 	return (
 		<>

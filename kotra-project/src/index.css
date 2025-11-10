@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @plugin './hero.ts';
 @source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
-@custom-variant dark (&:is(.dark *));
+@variant dark (&:where(.dark, .dark *));
 
 @font-face {
   font-family: "KyivTypeSerif";
@@ -25,6 +25,16 @@ body {
   --color-footer-bg: #DDD8D5;
   --color-footer-text: #5C493D;
   --color-nostar: #E5CAB3;
+}
+
+.dark {
+  --color-main-text: #F5F2EF;
+  --color-main-orange: #D97126; /* Оставим оранжевый таким же или можно поменять */
+  --color-button-text: #F5F2EF;
+  --color-main-bg: #100C0A;
+  --color-footer-bg: #2A2522;
+  --color-footer-text: #C2B0A4;
+  --color-nostar: #4D321A;
 }
 
 @layer base {

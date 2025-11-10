@@ -18,7 +18,7 @@ function AllPlacesMainPage() {
 					{ id: 2, src: img2},
 					{ id: 3, src: img3}
 				]}
-				linkto="/reservation"
+				linkto="/guest_house"
 			/>
 			<PlaceShortInformation
 				side='r'
@@ -30,7 +30,7 @@ function AllPlacesMainPage() {
 					{ id: 2, src: img2},
 					{ id: 3, src: img3}
 				]}
-				linkto="/"
+				linkto="/bath_house"
 			/>
 			<PlaceShortInformation
 				side='l'
@@ -43,7 +43,7 @@ function AllPlacesMainPage() {
 					{ id: 2, src: img2},
 					{ id: 3, src: img3}
 				]}
-				linkto="/"
+				linkto="/banquet_hall"
 			/>
 			<PlaceShortInformation
 				side='r'
@@ -55,7 +55,7 @@ function AllPlacesMainPage() {
 					{ id: 2, src: img2},
 					{ id: 3, src: img3}
 				]}
-				linkto="/"
+				linkto="/territory"
 			/>
 		</>
 	)

@@ -11,7 +11,7 @@ const Svg = () => (
 
 function CommentSection() {
 	return (
-		<div className="my-72 space-y-10">
+		<div className="my-16 lg:my-72 space-y-10">
 			<div className="flex gap-2.5 flex-col lg:flex-row">
 				<Comment name="Николай" rate={4} text='Отличное заведение, обслуживание на высшем уровне!' data='14.06.2024'></Comment>
 				<Comment name="Виктория" rate={1} text='Отличное заведение, обслуживание на высшем уровне!' data='14.06.2024'></Comment>

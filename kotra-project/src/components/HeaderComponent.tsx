@@ -36,10 +36,10 @@ function HeaderComponent() {
         <img src={kotraLogo} alt="" className='h-32 m-auto mt-2 lg:w-80 lg:h-auto object-contain'/>
       </Link>
 
-      <nav className='w-full border-0 border-b-2 border-t-2 border-main-text p-4 pl-5 pr-5 lg:border-t-0 lg:border-b-0'>
+      <nav className='w-full border-0 border-b-2 border-t-2 border-main-text p-4 pl-1 pr-1 lg:border-t-0 lg:border-b-0'>
         <ul className='w-full flex flex-row justify-between text-main-text flex-wrap font-medium text-base lg:justify-center lg:gap-x-15'>
           <li className='hover:text-main-orange transition-all'>
-            <NavLink to="/" className={({ isActive }) => isActive ? 'underline underline-offset-4' : ''} end onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <NavLink to="/" end className={({ isActive }) => isActive ? 'underline underline-offset-4' : ''} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               Главная
             </NavLink>
           </li>

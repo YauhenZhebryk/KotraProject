@@ -58,11 +58,11 @@ function PlaceShortInformation({ side, id, name, info, images = myImages, linkto
 						</div>
 					</div>
 
-					<div className="w-full lg:w-1/2">
+					<div className="w-full lg:w-1/2 order-2 lg:order-1 ">
 						<p className="text-[20px] text-main-text mt-4 leading-7">{info}</p>
 					</div>
 				</div>
-				<div>
+				<div>					 
 					<MainButton linkto={linkto} text='Узнать больше' image={<ChevronSvg />} />
 				</div>
 			</div>
@@ -84,7 +84,7 @@ function PlaceShortInformation({ side, id, name, info, images = myImages, linkto
 						<div className='block lg:hidden'>						
 							<ImageStack images={images} width='300px' height='300px' rotation={5} scaleFactor={0.95}/>
 						</div>
-						<div className='hidden lg:block'>						
+						<div className='hidden lg:block order-2 lg:order-1'>						
 							<SimpleImgSwapper images={images} width='400px' height='400px' animationSpeed={0.5}/>
 						</div>
 					</div>					

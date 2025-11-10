@@ -26,3 +26,7 @@ body {
   --color-footer-text: #5C493D;
   --color-nostar: #E5CAB3;
 }
+
+@layer base {
+  html { scroll-behavior: smooth; }
+}

@@ -6,7 +6,7 @@ import GeoLogo from "../assets/images/geo.svg"
 function Footer() {
 	  return (
 		
-		<div className="bg-footer-bg text-main-text p-5 space-y-4 mt-10 text-xl lg:px-20">
+		<div className="bg-footer-bg text-main-text p-5 pb-16 lg:pb-5 space-y-4 mt-10 text-xl lg:px-20">
 
 			<h2 className="text-footer-text">Контакты</h2>
 

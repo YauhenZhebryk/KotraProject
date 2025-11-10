@@ -1,4 +1,5 @@
 import DottedLine from './DottedLine'
+import { useNavigate } from 'react-router-dom'
 
 interface PlaceFullInformationProps {
     id : string

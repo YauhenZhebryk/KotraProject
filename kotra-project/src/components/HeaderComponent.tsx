@@ -1,10 +1,31 @@
-import kotraLogo from '../assets/images/kotraBlackLogo.png'
+import kotraBlackLogo from '../assets/images/kotraBlackLogo.png'
+import kotraWhiteLogo from '../assets/images/kotraWhiteLogo.png'
 import { Link, NavLink } from 'react-router-dom'
 import { useEffect, useState } from "react";
+import ThemeSwitcher from './ThemeSwitcher';
+
 
 function HeaderComponent() {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains('dark'));
+
+  useEffect(() => {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'class') {
+          setIsDark(document.documentElement.classList.contains('dark'));
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const scrollToBottom = () => {
     window.scrollTo({
@@ -31,7 +52,11 @@ function HeaderComponent() {
     <header className={`sticky top-0 z-50 w-full flex flex-col items-center bg-main-bg lg:flex-row lg:pl-20 lg:border-b-1 lg:border-main-text transition-transform duration-500
 		ease-in-out ${showHeader ? 'translate-y-0' : '-translate-y-full'}`}>
       <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-        <img src={kotraLogo} alt="" className='h-32 m-auto mt-2 lg:w-80 lg:h-auto object-contain'/>
+        <img 
+          src={isDark ? kotraWhiteLogo : kotraBlackLogo} 
+          alt="" 
+          className='h-32 m-auto mt-2 lg:w-80 lg:h-auto object-contain'
+        />
       </Link>
 
       <nav className='w-full border-0 border-b-2 border-t-2 border-main-text p-4 pl-1 pr-1 lg:border-t-0 lg:border-b-0'>
@@ -54,6 +79,9 @@ function HeaderComponent() {
           <li className='hover:text-main-orange transition-all cursor-pointer' onClick={scrollToBottom}>
             Контакты
           </li>
+					<li>
+						<ThemeSwitcher />
+					</li>
         </ul>
       </nav>
     </header>

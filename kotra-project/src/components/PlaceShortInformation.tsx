@@ -1,7 +1,6 @@
 import DottedLine from './DottedLine'
 import ImageStack from './ImageStack';
 import MainButton from './MainButton';
-import SimpleImgSwapper from './SimpleImgSwapper';
 import { ImageSlider } from './ImageSlider';
 
 interface PlaceShortInformationProps {

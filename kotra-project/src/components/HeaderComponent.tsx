@@ -79,11 +79,9 @@ function HeaderComponent() {
           <li className='hover:text-main-orange transition-all cursor-pointer' onClick={scrollToBottom}>
             Контакты
           </li>
-					<li>
-						<ThemeSwitcher />
-					</li>
         </ul>
       </nav>
+			<ThemeSwitcher />
     </header>
   );
 }

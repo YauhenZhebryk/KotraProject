@@ -2,9 +2,10 @@ import HouseNav from "../assets/images/main_house.png";
 import BanyaNav from "../assets/images/sauna.png";
 import ZalNav from "../assets/images/banketnyi_zal.png";
 import TerritoryaNav from "../assets/images/sauna.png";
+import Lighter from "./LIghter";
 
 
-function PlaceNavigation() {
+function Preview() {
   return (
  		<div className="flex gap-8">
    			<div className="flex-col space-y-20 py-16">
@@ -12,6 +13,7 @@ function PlaceNavigation() {
        				Агроусадьба «<span className="text-main-orange">Котра</span>» приглашает вас!
       			</div>
       			<div className="text-main-text text-xl">
+							<Lighter position="top-[150px] left-16" size="440"/>
         			Агроусадьба располагается в живописном уголке Гродненского района, всего в 25 км от Гродно, приглашает вас провести незабываемое корпоративное мероприятие в атмосфере уюта и гармонии с природой.
       			</div>
     		</div>
@@ -44,4 +46,4 @@ function PlaceNavigation() {
   );
 }
 
-export default PlaceNavigation;
+export default Preview;

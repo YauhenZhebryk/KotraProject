@@ -60,26 +60,28 @@ const ThemeSwitcher = () => {
     localStorage.setItem('theme', newTheme);
   }, [isDarkMode]);
 	return (
-    <Switch
-      classNames={{
-        wrapper: [
-          "group-data-[selected=true]:bg-footer-bg", 
-          "group-data-[hover=true]:bg-opacity-80", 
-          "bg-footer-bg", 
-        ],
-        thumb: [
-          "group-data-[selected=true]:bg-main-orange", 
-          "bg-main-bg",
-        ],
-      }}
-      isSelected={isDarkMode}
-      size="lg"
-      thumbIcon={({ isSelected, className }) =>
-        isSelected ? <SunIcon className={className} /> : <MoonIcon className={className} />
-      }
-      onValueChange={setIsDarkMode}
-    >
-    </Switch>
+		<div className='absolute right-5 top-5 lg:top-auto'>
+			<Switch
+				classNames={{
+					wrapper: [
+						"group-data-[selected=true]:bg-footer-bg", 
+						"group-data-[hover=true]:bg-opacity-80", 
+						"bg-footer-bg", 
+					],
+					thumb: [
+						"group-data-[selected=true]:bg-main-orange", 
+						"bg-main-bg",
+					],
+				}}
+				isSelected={isDarkMode}
+				size="lg"
+				thumbIcon={({ isSelected, className }) =>
+					isSelected ? <SunIcon className={className} /> : <MoonIcon className={className} />
+				}
+				onValueChange={setIsDarkMode}
+			>
+			</Switch>
+		</div>
   );
 };
 

@@ -10,8 +10,8 @@ function HomePage() {
 	return (
 		<>
 			<HeaderComponent />
-			<div className='lg:px-30 xl:px-40'>
-				<div className='w-full px-2'>
+			<div className='px-4 lg:max-w-6xl m-auto lg:px-5'>
+				<div className='w-full'>
 					<div className='hidden lg:block my-8'>
 						<Preview />
 					</div>

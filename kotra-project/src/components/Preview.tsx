@@ -1,5 +1,3 @@
-import PlaceCard from "./PlaceCard";
-
 import HouseNav from "../assets/images/main_house.png";
 import BanyaNav from "../assets/images/sauna.png";
 import ZalNav from "../assets/images/banketnyi_zal.png";
@@ -8,7 +6,6 @@ import TerritoryaNav from "../assets/images/sauna.png";
 
 function PlaceNavigation() {
   return (
-    <div className="p-6">
  		<div className="flex gap-8">
    			<div className="flex-col space-y-20 py-16">
      			<div className="text-main-text text-4xl">
@@ -43,10 +40,7 @@ function PlaceNavigation() {
 					</a>
 				</div>
     		</div>
-  		</div>
-	</div>
-
-
+  	</div>
   );
 }
 

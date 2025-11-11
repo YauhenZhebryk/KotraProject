@@ -60,7 +60,7 @@ const ThemeSwitcher = () => {
     localStorage.setItem('theme', newTheme);
   }, [isDarkMode]);
 	return (
-		<div className='absolute right-5 top-5 lg:top-auto'>
+		<div className='absolute right-4 top-4 lg:top-auto'>
 			<Switch
 				classNames={{
 					wrapper: [

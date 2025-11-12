@@ -1,42 +1,16 @@
 import DottedLine from './DottedLine'
 import { useNavigate } from 'react-router-dom'
 import MasonryGrid from './MasonryGrid'
+
 interface PlaceFullInformationProps {
     id : string
     name: string
     info: string
-    img?: Array<string>
+    images?: string[];
 }
 
- const images = [
-    "https://picsum.photos/400/300",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/300/400",
-    "https://picsum.photos/350/250",
-    "https://picsum.photos/400/500",
-    "https://picsum.photos/250/350",
-    "https://picsum.photos/300/300",
-    "https://picsum.photos/450/350",
-    "https://picsum.photos/400/300",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/300/400",
-    "https://picsum.photos/350/250",
-		
-    "https://picsum.photos/400/300",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/300/400",
-    "https://picsum.photos/350/250",
-    "https://picsum.photos/400/500",
-    "https://picsum.photos/250/350",
-    "https://picsum.photos/300/300",
-    "https://picsum.photos/450/350",
-    "https://picsum.photos/400/300",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/300/400",
-    "https://picsum.photos/350/250",
-  ];
 
-function PlaceFullInformation({ id, name, info}: PlaceFullInformationProps) {
+function PlaceFullInformation({ id, name, info, images = []}: PlaceFullInformationProps) {
 
     const navigate = useNavigate()
 

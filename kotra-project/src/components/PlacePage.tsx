@@ -7,10 +7,10 @@ type PlaceProps = {
 	id : string
 	name : string;
 	info : string;
-	img? : Array<string>;
+	images? : string[];
 }
 
-function PlacePage ({id, name, info, img}: PlaceProps) {
+function PlacePage ({id, name, info, images = []}: PlaceProps) {
 	useEffect(() => {
 			window.scrollTo(0, 0);
 		}, []);
@@ -18,7 +18,7 @@ function PlacePage ({id, name, info, img}: PlaceProps) {
 	<div>
 		<HeaderComponent />
 		<div className="lg:px-30 xl:px-40">
-			<PlaceFullInformation id={id} name={name} info={info } img={img} />
+			<PlaceFullInformation id={id} name={name} info={info } images={images} />
 		</div>
 		<Footer />
 	</div>

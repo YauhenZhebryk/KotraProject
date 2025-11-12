@@ -1,8 +1,8 @@
-import HouseNav from "../assets/images/main_house.png";
-import BanyaNav from "../assets/images/sauna.png";
-import ZalNav from "../assets/images/banketnyi_zal.png";
-import TerritoryaNav from "../assets/images/sauna.png";
-import Lighter from "./LIghter";
+import HouseNav from "../assets/images/house/main_house.png";
+import BanyaNav from "../assets/images/banya/sauna.png";
+import ZalNav from "../assets/images/hall/banketnyi_zal.png";
+import TerritoryaNav from "../assets/images/territory/territory_8.png";
+import Lighter from "./Lighter";
 
 
 function Preview() {
@@ -25,12 +25,12 @@ function Preview() {
 							<img src={HouseNav} title="Гостевой дом" alt="" className="w-full h-full rounded-full" />
 						</div>
 					</a>
-					<a href="#banya" className="absolute top-1/2 right-0 -translate-y-1/2">
+					<a href="#bath" className="absolute top-1/2 right-0 -translate-y-1/2">
 						<div className="w-50 h-50 rounded-full  flex items-center justify-center hover:scale-110 transition-transform">
 							<img src={BanyaNav} title="Банный комплекс" alt="" className="w-full h-full rounded-full" />
 						</div>
 					</a>
-					<a href="#zal" className="absolute bottom-0 left-1/2 -translate-x-1/2">
+					<a href="#hall" className="absolute bottom-0 left-1/2 -translate-x-1/2">
 						<div className="w-50 h-50 rounded-full  flex items-center justify-center hover:scale-110 transition-transform">
 							<img src={ZalNav} title="Банкетный зал" alt="" className="w-full h-full rounded-full" />
 						</div>

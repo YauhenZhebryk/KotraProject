@@ -1,5 +1,5 @@
-import kotraBlackLogo from '../assets/images/kotraBlackLogo.png'
-import kotraWhiteLogo from '../assets/images/kotraWhiteLogo.png'
+import kotraBlackLogo from '../assets/images/kotraLogo/kotraBlackLogo.png'
+import kotraWhiteLogo from '../assets/images/kotraLogo/kotraWhiteLogo.png'
 import { Link, NavLink } from 'react-router-dom'
 import { useEffect, useState } from "react";
 import ThemeSwitcher from './ThemeSwitcher';

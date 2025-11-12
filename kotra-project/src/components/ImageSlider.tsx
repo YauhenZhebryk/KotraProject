@@ -36,11 +36,11 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
   };
 
   return (
-    <div className="w-full h-full max-w-3xl mx-auto p-4 sm:p-6 ">
+    <div className="w-full h-full max-w-3xl mx-auto p-4 sm:p-6">
       <div className="flex items-center justify-center gap-2 sm:gap-4 h-full">
         <button
           onClick={() => paginate(-1)}
-          className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center
+          className="flex-shrink-0 z-10 w-12 h-12 rounded-full flex items-center justify-center
                      bg-transparent text-main-orange border-2 border-main-orange
                      hover:bg-main-orange hover:text-button-text transition-all duration-300 
                      focus:outline-none focus:ring-2 focus:ring-main-orange"
@@ -68,7 +68,7 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
         </div>
         <button
           onClick={() => paginate(1)}
-          className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center
+          className="flex-shrink-0 w-12 z-10 h-12 rounded-full flex items-center justify-center
                      bg-transparent text-main-orange border-2 border-main-orange
                      hover:bg-main-orange hover:text-button-text transition-all duration-300 
                      focus:outline-none focus:ring-2 focus:ring-main-orange"

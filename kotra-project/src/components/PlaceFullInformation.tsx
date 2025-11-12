@@ -1,5 +1,6 @@
 import DottedLine from './DottedLine'
 import { useNavigate } from 'react-router-dom'
+import Masonry from './Masonry'
 
 interface PlaceFullInformationProps {
     id : string
@@ -20,6 +21,8 @@ function PlaceFullInformation({ id, name, info}: PlaceFullInformationProps) {
             <DottedLine />
 
             <p className="text-[20px] text-main-text mt-4 leading-7 whitespace-pre-line">{info}</p>
+
+			<Masonry />
 
             <div className="flex flex-col lg:flex-row gap-4 justify-center mt-10 text-xl lg:h-16">
                 <button

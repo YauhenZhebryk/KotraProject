@@ -2,6 +2,7 @@ import DottedLine from './DottedLine'
 import ImageStack from './ImageStack';
 import MainButton from './MainButton';
 import { ImageSlider } from './ImageSlider';
+import Lighter from './Lighter';
 
 interface PlaceShortInformationProps {
 	side: string
@@ -53,11 +54,11 @@ function PlaceShortInformation({ side, id, name, info, images = myImages, linkto
 						<div className='block lg:hidden'>						
 							<ImageStack images={images} width='300px' height='300px' rotation={5} scaleFactor={0.95}/>
 						</div>
-						<div className='hidden lg:block'>						
+						<div className='relative hidden lg:block'>
+							<Lighter position="top-[-50px] left-50" size="440"/>						
 							<ImageSlider images={images}/>
 						</div>
-					</div>
-
+					</div>				
 					<div className="w-full lg:w-1/2 order-2 lg:order-1 ">
 						<p className="text-[20px] text-main-text mt-4 leading-7">{info}</p>
 					</div>
@@ -79,12 +80,13 @@ function PlaceShortInformation({ side, id, name, info, images = myImages, linkto
 					<div className="w-full lg:w-1/2">
 						<p className="text-[20px] text-main-text mt-4 leading-7">{info}</p>
 					</div>
-			
+					
 					<div className="w-full lg:w-1/2 flex justify-center">
 						<div className='block lg:hidden'>						
 							<ImageStack images={images} width='300px' height='300px' rotation={5} scaleFactor={0.95}/>
 						</div>
-						<div className='hidden lg:block order-2 lg:order-1'>						
+						<div className='relative hidden lg:block order-2 lg:order-1'>	
+							<Lighter position="top-[-50px] -left-50" size="440"/>					
 							<ImageSlider images={images}/>
 						</div>
 					</div>					

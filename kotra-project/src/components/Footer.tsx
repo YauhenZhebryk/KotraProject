@@ -1,6 +1,6 @@
-import InstaLogo from "../assets/images/insta.svg"
-import PhoneLogo from "../assets/images/phone.svg"
-import GeoLogo from "../assets/images/geo.svg"
+import InstaLogo from "../assets/images/footerSVG/insta.svg"
+import PhoneLogo from "../assets/images/footerSVG/phone.svg"
+import GeoLogo from "../assets/images/footerSVG/geo.svg"
 
 
 

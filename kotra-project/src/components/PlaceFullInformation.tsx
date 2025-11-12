@@ -1,6 +1,6 @@
 import DottedLine from './DottedLine'
 import { useNavigate } from 'react-router-dom'
-
+import MasonryGrid from './MasonryGrid'
 interface PlaceFullInformationProps {
     id : string
     name: string
@@ -8,6 +8,33 @@ interface PlaceFullInformationProps {
     img?: Array<string>
 }
 
+ const images = [
+    "https://picsum.photos/400/300",
+    "https://picsum.photos/200/300",
+    "https://picsum.photos/300/400",
+    "https://picsum.photos/350/250",
+    "https://picsum.photos/400/500",
+    "https://picsum.photos/250/350",
+    "https://picsum.photos/300/300",
+    "https://picsum.photos/450/350",
+    "https://picsum.photos/400/300",
+    "https://picsum.photos/200/300",
+    "https://picsum.photos/300/400",
+    "https://picsum.photos/350/250",
+		
+    "https://picsum.photos/400/300",
+    "https://picsum.photos/200/300",
+    "https://picsum.photos/300/400",
+    "https://picsum.photos/350/250",
+    "https://picsum.photos/400/500",
+    "https://picsum.photos/250/350",
+    "https://picsum.photos/300/300",
+    "https://picsum.photos/450/350",
+    "https://picsum.photos/400/300",
+    "https://picsum.photos/200/300",
+    "https://picsum.photos/300/400",
+    "https://picsum.photos/350/250",
+  ];
 
 function PlaceFullInformation({ id, name, info}: PlaceFullInformationProps) {
 
@@ -20,6 +47,8 @@ function PlaceFullInformation({ id, name, info}: PlaceFullInformationProps) {
             <DottedLine />
 
             <p className="text-[20px] text-main-text mt-4 leading-7 whitespace-pre-line">{info}</p>
+
+						<MasonryGrid images={images}/>
 
             <div className="flex flex-col lg:flex-row gap-4 justify-center mt-10 text-xl lg:h-16">
                 <button

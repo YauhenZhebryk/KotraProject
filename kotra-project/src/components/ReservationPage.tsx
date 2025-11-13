@@ -10,7 +10,9 @@ function ReservationPage() {
     return (
         <>
             <HeaderComponent />
-            <ReservationForm/>
+            <div className="px-4 lg:max-w-6xl m-auto lg:px-5">
+							<ReservationForm/>
+						</div>
             <Footer />
         </>
     )

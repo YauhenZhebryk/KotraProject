@@ -111,42 +111,60 @@ function ReservationForm() {
   };
 
 	return (
-		<form onSubmit={handleSubmit} className="flex gap-3 flex-col mb-6 py-4">
-			<InputComponent
-                text="Имя"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-								errorMessage={messageType === 'name' ? message : null}
-            />
-			<InputComponent
-                text="Телефон"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-								errorMessage={messageType === 'phone' ? message : null}
-            />
-			<InputComponent
-                text="Описание заявки"
-                type="area"
-                name="description"
-                value={formData.description}
-                onChange={handleChange}
-								errorMessage={messageType === 'description' ? message : null}
-								
-            />
-			<MainButton
-                text={statusType === 'loading' ? 'Отправка...' : 'Отправить'}
-                type="submit"
-                disabled={statusType === 'loading'}
-            />
+		<div>
+			<h1 className="text-center mt-4 text-4xl lg:mt-16 mb-6">Бронирование усадьбы</h1>
+				<form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-4">
 
-            {message && (
-                <div className={`status-message ${getStatusClass(statusType)}`}>
-                    {message}
-                </div>
-            )}
-		</form>
+                    <div className="relative w-full bg-footer-bg rounded-xl p-3 lg:p-6 lg:col-start-2 lg:row-start-1 lg:flex lg:items-center lg:text-center pt-6">
+                        <p className="text-[20px] text-main-text leading-7 ">
+                            После того как Вы заполните и отправите форму бронирования, мы обязательно свяжемся с вами по телефону для уточнения всех деталей.
+                        </p>
+                        <span className="absolute right-0 top-0 transform translate-x-1/3 -translate-y-1/3 w-9 h-9 flex items-center justify-center bg-main-orange text-button-text rounded-full text-[20px] font-medium">
+                            ?
+                        </span>
+                    </div>
+
+                    <div className="flex flex-col gap-3 lg:col-start-1 lg:row-start-1">
+                        <InputComponent
+									text="Имя"
+									name="name"
+									value={formData.name}
+									onChange={handleChange}
+									errorMessage={messageType === 'name' ? message : null}
+									
+							/>
+				<InputComponent
+									text="Телефон"
+									name="phone"
+									value={formData.phone}
+									onChange={handleChange}
+									errorMessage={messageType === 'phone' ? message : null}
+							/>
+                    </div>
+
+                    <div className="col-span-1 lg:col-span-2">
+                        <InputComponent
+									text="Описание заявки"
+									type="area"
+									name="description"
+									value={formData.description}
+									onChange={handleChange}
+									errorMessage={messageType === 'description' ? message : null}
+									
+							/>
+                        <div className="mt-4">
+                            <MainButton
+									text={statusType === 'loading' ? 'Отправка...' : 'Отправить'}
+									type="submit"
+									disabled={statusType === 'loading'}
+							/>
+                        </div>
+                    </div>
+                </form>
+		</div>
+
+	
+
 	);
 }
 

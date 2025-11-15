@@ -1,7 +1,8 @@
-import HouseNav from "../assets/images/house/main_house.png";
-import BanyaNav from "../assets/images/banya/sauna.png";
-import ZalNav from "../assets/images/hall/banketnyi_zal.png";
-import TerritoryaNav from "../assets/images/territory/territory_8.png";
+import HouseNav from '../assets/images/mainPhotos/housewebp/main_house.webp'
+import BanyaNav from '../assets/images/mainPhotos/banyawebp/sauna.webp'
+import ZalNav from '../assets/images/mainPhotos/hall/banketnyi_zal.png'
+import TerritoryaNav from '../assets/images/mainPhotos/territorywebp/territory_10.webp'
+
 import Lighter from "./Lighter";
 
 

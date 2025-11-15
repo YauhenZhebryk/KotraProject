@@ -1,7 +1,8 @@
 import PlaceShortInformation from './PlaceShortInformation'
-import img1 from '../assets/images/banya/sauna.png'
-import img2 from '../assets/images/hall/banketnyi_zal.png'
-import img3 from '../assets/images/house/main_house.png'
+
+import img1 from '../assets/images/mainPhotos/banyawebp/sauna.webp'
+import img2 from '../assets/images/mainPhotos/hall/banketnyi_zal.png'
+import img3 from '../assets/images/mainPhotos/housewebp/main_house.webp'
 
 
 

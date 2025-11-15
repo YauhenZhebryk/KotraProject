@@ -1,7 +1,7 @@
 import HouseNav from '../assets/images/mainPhotos/housewebp/main_house.webp'
 import BanyaNav from '../assets/images/mainPhotos/banyawebp/sauna.webp'
-import ZalNav from '../assets/images/mainPhotos/hall/banketnyi_zal.png'
-import TerritoryaNav from '../assets/images/mainPhotos/territorywebp/territory_10.webp'
+import ZalNav from '../assets/images/mainPhotos/hallwebp/hall_11.webp'
+import TerritoryaNav from '../assets/images/mainPhotos/territorywebp/territory_6.webp'
 
 import Lighter from "./Lighter";
 
@@ -23,22 +23,22 @@ function Preview() {
 				<div className="relative w-125 h-125 left-1/2 -translate-x-1/2">
 					<a href="#house" className="absolute top-0 left-1/2 -translate-x-1/2">
 						<div className="w-50 h-50 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
-							<img src={HouseNav} title="Гостевой дом" alt="" className="w-full h-full rounded-full" />
+							<img src={HouseNav} title="Гостевой дом" alt="" className="w-full h-full rounded-full object-cover" />
 						</div>
 					</a>
 					<a href="#bath" className="absolute top-1/2 right-0 -translate-y-1/2">
 						<div className="w-50 h-50 rounded-full  flex items-center justify-center hover:scale-110 transition-transform">
-							<img src={BanyaNav} title="Банный комплекс" alt="" className="w-full h-full rounded-full" />
+							<img src={BanyaNav} title="Банный комплекс" alt="" className="w-full h-full rounded-full object-cover" />
 						</div>
 					</a>
 					<a href="#hall" className="absolute bottom-0 left-1/2 -translate-x-1/2">
 						<div className="w-50 h-50 rounded-full  flex items-center justify-center hover:scale-110 transition-transform">
-							<img src={ZalNav} title="Банкетный зал" alt="" className="w-full h-full rounded-full" />
+							<img src={ZalNav} title="Банкетный зал" alt="" className="w-full h-full rounded-full object-cover" />
 						</div>
 					</a>
 					<a href="#territory" className="absolute top-1/2 left-0 -translate-y-1/2">
 						<div className="w-50 h-50 rounded-full  flex items-center justify-center hover:scale-110 transition-transform">
-							<img src={TerritoryaNav} title="Территория" alt="" className="w-full h-full rounded-full" />
+							<img src={TerritoryaNav} title="Территория" alt="" className="w-full h-full rounded-full object-cover" />
 						</div>
 					</a>
 				</div>

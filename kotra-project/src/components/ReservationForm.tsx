@@ -18,6 +18,7 @@ function ReservationForm() {
     description: ''
   });
 
+
   const [message, setMessage] = useState<string | null>(null); // Текст сообщения
   const [statusType, setStatusType] = useState<StatusType>('idle'); // Тип сообщения для стилизации
 	const [messageType, setMessageType] = useState<string | null>(null);
@@ -95,27 +96,13 @@ function ReservationForm() {
     }
   };
 
-  const getStatusClass = (type: StatusType) => {
-    switch (type) {
-      case 'error':  return 'status-error'; // Если используете обычный CSS
-        return 'bg-red-100 text-red-700 border border-red-700'; // Если используете Tailwind CSS
-      case 'success':
-        return 'status-success'; // Если используете обычный CSS
-        // return 'bg-green-100 text-green-700 border border-green-700'; // Если используете Tailwind CSS
-      case 'loading':
-        return 'status-info'; // Если используете обычный CSS
-        // return 'bg-blue-100 text-blue-700 border border-blue-700'; // Если используете Tailwind CSS
-      default:
-        return '';
-    }
-  };
 
 	return (
 		<div>
 			<h1 className="text-center mt-4 text-4xl lg:mt-16 mb-6">Бронирование усадьбы</h1>
 				<form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-4">
 
-                    <div className="relative w-full bg-footer-bg rounded-xl p-3 lg:p-6 lg:col-start-2 lg:row-start-1 lg:flex lg:items-center lg:text-center pt-6">
+                    <div className="relative w-full bg-footer-bg rounded-xl p-3 lg:p-6 lg:col-start-2 lg:row-start-1 lg:flex lg:items-center  ">
                         <p className="text-[20px] text-main-text leading-7 ">
                             После того как Вы заполните и отправите форму бронирования, мы обязательно свяжемся с вами по телефону для уточнения всех деталей.
                         </p>

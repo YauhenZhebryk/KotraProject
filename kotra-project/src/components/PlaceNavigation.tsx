@@ -2,8 +2,8 @@ import PlaceCard from './PlaceCard'
 
 import HouseNav from '../assets/images/mainPhotos/housewebp/main_house.webp'
 import BanyaNav from '../assets/images/mainPhotos/banyawebp/sauna.webp'
-import ZalNav from '../assets/images/mainPhotos/hall/banketnyi_zal.png'
-import TerritoryaNav from '../assets/images/mainPhotos/territorywebp/territory_10.webp'
+import ZalNav from '../assets/images/mainPhotos/hallwebp/hall_11.webp'
+import TerritoryaNav from '../assets/images/mainPhotos/territorywebp/territory_6.webp'
 
 import { useNavigate } from 'react-router-dom'
 

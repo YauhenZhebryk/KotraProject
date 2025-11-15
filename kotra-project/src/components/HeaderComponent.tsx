@@ -3,12 +3,13 @@ import kotraWhiteLogo from '../assets/images/kotraLogo/kotraWhiteLogo.png'
 import { Link, NavLink } from 'react-router-dom'
 import { useEffect, useState } from "react";
 import ThemeSwitcher from './ThemeSwitcher';
+import { getInitialTheme } from '../utils/theme';
 
 
 function HeaderComponent() {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains('dark'));
+  const [isDark, setIsDark] = useState<boolean>(getInitialTheme);
 
   useEffect(() => {
     const observer = new MutationObserver((mutations) => {

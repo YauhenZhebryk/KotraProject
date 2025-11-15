@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import {Switch} from "@heroui/react";
-
+import { getInitialTheme } from '../utils/theme';
 export const MoonIcon = (props) => {
   return (
     <svg
@@ -37,14 +37,6 @@ export const SunIcon = (props) => {
       </g>
     </svg>
   );
-};
-
-const getInitialTheme = (): boolean => {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    return savedTheme === 'dark';
-  }
-  return window.matchMedia('(prefers-color-scheme: dark)').matches;
 };
 
 const ThemeSwitcher = () => {

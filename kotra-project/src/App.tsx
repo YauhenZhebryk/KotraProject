@@ -3,7 +3,7 @@ import './App.css'
 import './index.css'
 import HomePage from "./components/HomePage";
 import ReservationPage from "./components/ReservationPage";
-import ReviewPage from "./components/ReviewPage";
+import ReviewPage from "./components/ReviewsPage";
 import PlacePage from "./components/PlacePage";
 function App() {
 			const modules = import.meta.glob('./assets/images/mainPhotos/housewebp/*', { eager: true }) as Record<string, { default: string }>;

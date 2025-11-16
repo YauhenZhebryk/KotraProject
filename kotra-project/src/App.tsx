@@ -4,6 +4,7 @@ import './index.css'
 import HomePage from "./components/HomePage";
 import ReservationPage from "./components/ReservationPage";
 import ReviewPage from "./components/ReviewsPage";
+import ReviewsListPage from "./components/ReviewsListPage";
 import FullPlaceInfoPage from "./components/FullPlaceInfoPage";
 function App() {
 			const modules = import.meta.glob('./assets/images/mainPhotos/housewebp/*', { eager: true }) as Record<string, { default: string }>;
@@ -30,6 +31,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
 				<Route path="/reservation" element={<ReservationPage />} />
 				<Route path="/review" element={<ReviewPage />} />				
+				<Route path="/reviews" element={<ReviewsListPage />} />
 				<Route path="/guest_house" element={<FullPlaceInfoPage id="" name="Гостевой дом" info={`Наш гостевой домик — это просторное и комфортное место для отдыха и проведения мероприятий.
 					\nПервый этаж включает в себя всё необходимое для удобного времяпрепровождения: гостиную с мягким диваном и телевизором, оборудованную кухню, а также просторное помещение с большим количеством столов, идеально подходящее для совместных застолий или мероприятий.
 					\nНа втором этаже расположены две отдельные спальни с двуспальными кроватями, а также общая комната с диванчиками и камином, где можно расслабиться в уютной атмосфере.
@@ -47,7 +49,7 @@ function App() {
 						\nВ центре зоны отдыха расположено уютное кострище, где пламя мягко освещает пространство, создавая волшебную атмосферу тепла и уединения. Мягкое декоративное освещение вдоль дорожек и вокруг усадьбы подчёркивает красоту ландшафта и делает вечерние прогулки особенно приятными.
 						\nРядом находится оборудованная зона барбекю, где можно приготовить ароматные блюда на гриле, провести время с близкими и насладиться вкусом еды, приготовленной на открытом воздухе. Здесь каждый вечер превращается в настоящий праздник: треск огня, мерцание подсветки, аромат шашлыка и свежий ветер создают непередаваемую атмосферу отдыха и уюта.
 						\nЭто идеальное место для тех, кто ценит природу, спокойствие и красивые моменты, проведённые в хорошей компании.`} images={territoryImages} />} />
-
+				
       </Routes>
     </>
   )

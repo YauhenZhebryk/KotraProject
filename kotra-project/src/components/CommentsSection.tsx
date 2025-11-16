@@ -16,7 +16,9 @@ function CommentsSection() {
 				<Comment name="Виктория" rate={5} text='Приезжали компанией — всем очень понравилось. Территория ухоженная, вокруг лес и свежий воздух. Рекомендуем!' data='14.06.2024'></Comment>
 				<Comment name="Kirill" rate={5} text='Усадьба выше всех ожиданий: чисто, красиво и очень атмосферно.' data='14.06.2024'></Comment>
 			</div>
-			<div>
+			<div className="flex flex-row gap-4 justify-end">
+				
+				<MainButton linkto='/reviews' text='Все отзывы' />
 				<MainButton linkto='/review' text='Оставить отзыв' image={<Svg />} />
 			</div>
 		</div>

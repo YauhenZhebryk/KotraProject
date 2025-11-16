@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1763295965264",
+    "name": "asdfasfd",
+    "phone": "+123123123",
+    "description": "aaaaaaaaaaaa",
+    "rate": 5,
+    "createdAt": "2025-11-16T12:26:05.264Z"
+  },
+  {
+    "id": "1763297901996",
+    "name": "olesha",
+    "phone": "+111111111111",
+    "description": "gavno",
+    "rate": 5,
+    "createdAt": "2025-11-16T12:58:21.996Z"
+  }
+]

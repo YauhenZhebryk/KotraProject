@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import InputComponent from './InputComponent';
 import MainButton from './MainButton';
 import Stars from './Stars';
-import Lighter from './Lighter';
 
 type FormData = {
   name: string;
@@ -131,7 +130,7 @@ function ReviewsForm() {
 				<form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
                     <div className="relative w-full bg-footer-bg rounded-xl p-3 lg:p-6 lg:col-start-2 lg:row-start-1 lg:flex lg:items-center  ">
-						 <Lighter position="top-[-180px] left-70" size="440"/> 
+						
                         <p className="text-[20px] text-main-text leading-7 ">
                             Мы ценим ваше мнение и будем благодарны, если вы поделитесь своими впечатлениями! Ваш отзыв поможет другим пользователям сделать правильный выбор, а нам — улучшать качество сервиса и развиваться дальше!
                         </p>
@@ -162,10 +161,17 @@ function ReviewsForm() {
 						<div className='mb-5'>
 							<span className="block text-[20px] p-2 text-main-text">
 								Оценка</span>
-							<Stars currentRate={formData.rate} onRate={handleRate} />
+							<Stars currentRate={formData.rate} onRate={handleRate} isClickable={true} />
 							{messageType === "rate" && (
-								<p className="text-sm mt-1">{message}</p>
-							)}
+							<div className='flex flex-row items-center'>
+								<div className='m-2 text-red-500'>
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+									</svg>
+								</div>
+								<span>{message}</span>
+							</div>
+						)}
 						</div>
                         <InputComponent
 									text="Отзыв"

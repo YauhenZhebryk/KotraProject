@@ -4,13 +4,14 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import axios from 'axios';
 
-const router = express.Router();
+const reviewsRouter = express.Router();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_FILE = path.join(__dirname, 'reviews.json');
 
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+
 
 const ensureDataFile = async () => {
   try {
@@ -45,7 +46,7 @@ const validateReview = (data) => {
 };
 
 // GET /api/reviews - return all reviews
-router.get('/reviews', async (req, res) => {
+reviewsRouter.get('/reviews', async (req, res) => {
   try {
     const reviews = await readReviews();
     // return newest first
@@ -58,7 +59,7 @@ router.get('/reviews', async (req, res) => {
 });
 
 // POST /api/reviews - create a new review, save to file and send to telegram
-router.post('/reviews', async (req, res) => {
+reviewsRouter.post('/reviews', async (req, res) => {
   try {
     const error = validateReview(req.body);
     if (error) return res.status(400).json({ success: false, message: error });
@@ -77,9 +78,13 @@ router.post('/reviews', async (req, res) => {
     reviews.push(review);
     await writeReviews(reviews);
 
-    // send to telegram
-    const message = `\n📣 *Новый отзыв*:\n👤 ${review.name}\n📞 ${review.phone}\n⭐ Оценка: ${review.rate}\n📝 ${review.description}`;
-    if (BOT_TOKEN && CHAT_ID) {
+    const message = `\n📣 *Новый отзыв*:\n👤 ${review.name}\n📞 ${review.phone}\n⭐ ${review.rate}\n📝 ${review.description}`;
+ 
+		console.log('Попытка отправки в Telegram...');
+		console.log('Используемый токен (первые 5 символов):', BOT_TOKEN ? BOT_TOKEN.substring(0, 5) : 'Токен НЕ ЗАДАН (undefined)');
+		console.log('Используемый CHAT_ID:', CHAT_ID);
+
+		if (BOT_TOKEN && CHAT_ID) {
       try {
         await axios.post(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
           chat_id: CHAT_ID,
@@ -99,4 +104,4 @@ router.post('/reviews', async (req, res) => {
   }
 });
 
-export default router;
+export { reviewsRouter };

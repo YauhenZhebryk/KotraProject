@@ -75,7 +75,7 @@ function Header() {
 						</li>
 						<li className='hover:text-main-orange transition-all'>
 							<NavLink to="/review" className={({ isActive }) => isActive ? 'underline underline-offset-4' : ''}>
-								Отзывы
+								Отзыв
 							</NavLink>
 						</li>
 						<li className='hover:text-main-orange transition-all cursor-pointer' onClick={scrollToBottom}>

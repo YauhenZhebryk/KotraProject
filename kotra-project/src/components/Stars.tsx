@@ -79,7 +79,7 @@
 // export default Stars;
 
 
-import React, { useState } from "react";
+import { useState } from "react";
 
 type StarsProps = {
   currentRate: number;
@@ -102,9 +102,9 @@ function Stars({ currentRate, onRate }: StarsProps) {
         onMouseEnter={() => setHoverRate(number)}
         onMouseLeave={() => setHoverRate(null)}
         onClick={() => onRate(number)}
-        className={`size-10 cursor-pointer transition-all duration-200
+        className={`size-16 cursor-pointer transition-all duration-200 px-1
           ${isFilled ? "text-main-orange scale-110" : "text-nostar scale-100"}
-          hover:scale-125
+          hover:scale-125 
         `}
       >
         <path
@@ -117,7 +117,7 @@ function Stars({ currentRate, onRate }: StarsProps) {
   };
 
   return (
-    <div className="flex gap-3">
+    <div className="flex">
       {[1, 2, 3, 4, 5].map((n) => (
         <Star key={n} number={n} />
       ))}

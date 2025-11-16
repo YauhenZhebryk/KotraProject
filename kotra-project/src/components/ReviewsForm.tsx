@@ -11,20 +11,19 @@ type FormData = {
   rate: number;
 };
 
-// Добавим тип для статуса, чтобы различать успех, ошибку и загрузку
 type StatusType = 'idle' | 'loading' | 'success' | 'error';
 
-function ReservationForm() {
+function ReviewsForm() {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     phone: '',
     description: '',
-	rate: 0
+		rate: 0
   });
 
 
-  const [message, setMessage] = useState<string | null>(null); // Текст сообщения
-  const [statusType, setStatusType] = useState<StatusType>('idle'); // Тип сообщения для стилизации
+  const [message, setMessage] = useState<string | null>(null);
+  const [statusType, setStatusType] = useState<StatusType>('idle'); 
 	const [messageType, setMessageType] = useState<string | null>(null);
 
   const handleChange = (
@@ -86,7 +85,7 @@ function ReservationForm() {
     setStatusType('loading');
 
     try {
-      const response = await fetch('http://localhost:5000/api/reservation', {
+      const response = await fetch('http://localhost:5000/api/reviews', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -95,17 +94,26 @@ function ReservationForm() {
       });
 
       if (response.ok) {
-        setMessage('Заявка успешно отправлена!');
+        setMessage('Отзыв успешно отправлен!');
         setStatusType('success'); // Устанавливаем тип "успех"
         setFormData({
           name: '',
           phone: '',
           description: '',
-		  rate: 0
+			  	rate: 0
         });
       } else {
-        const data = await response.json();
-        setMessage(`❌ Ошибка: ${data.message || 'Не удалось отправить'}`);
+        const contentType = response.headers.get('content-type') || '';
+        let errorText = 'Не удалось отправить';
+        if (contentType.includes('application/json')) {
+          const data = await response.json();
+          errorText = data?.message || errorText;
+        } else {
+          // try to read text (could be HTML page)
+          const text = await response.text();
+          errorText = text || errorText;
+        }
+        setMessage(`❌ Ошибка: ${errorText}`);
         setStatusType('error');
       }
     } catch (error) {
@@ -123,7 +131,7 @@ function ReservationForm() {
 				<form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
                     <div className="relative w-full bg-footer-bg rounded-xl p-3 lg:p-6 lg:col-start-2 lg:row-start-1 lg:flex lg:items-center  ">
-						{/* <Lighter position="top-[-180px] left-70" size="440"/> */}
+						 <Lighter position="top-[-180px] left-70" size="440"/> 
                         <p className="text-[20px] text-main-text leading-7 ">
                             Мы ценим ваше мнение и будем благодарны, если вы поделитесь своими впечатлениями! Ваш отзыв поможет другим пользователям сделать правильный выбор, а нам — улучшать качество сервиса и развиваться дальше!
                         </p>
@@ -184,4 +192,4 @@ function ReservationForm() {
 	);
 }
 
-export default ReservationForm;
+export default ReviewsForm;

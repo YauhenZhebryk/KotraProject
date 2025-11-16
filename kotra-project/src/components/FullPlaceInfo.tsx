@@ -24,11 +24,11 @@ function FullPlaceInfo({ id, name, info, images = []}: FullPlaceInfoProps) {
 
 						<MasonryGrid images={images}/>
 
-            <div className="flex flex-col lg:flex-row gap-4 justify-center mt-10 text-xl lg:h-16">
+            <div className="flex flex-col lg:flex-row gap-4 justify-center mt-10 text-xl">
                 <button
                     type="button"
                     onClick={() => navigate(-1)}
-                    className="cursor-pointer w-full lg:w-1/2 px-6 py-2 border-2 text-main-text border-main-orange rounded-lg hover:bg-footer-bg transition"
+                    className="cursor-pointer w-full lg:w-1/2 border-2 text-main-text border-main-orange hover:bg-footer-bg transition rounded-xl bg-main-bg px-2 py-3 text-2xl font-[100]"
                 >
                     Вернуться к просмотру
                 </button>
@@ -36,7 +36,7 @@ function FullPlaceInfo({ id, name, info, images = []}: FullPlaceInfoProps) {
                 <button
                     type="button"
                     onClick={() => navigate('/reservation')}
-                    className="cursor-pointer w-full lg:w-1/2 px-6 py-2 bg-main-orange text-button-text rounded-lg hover:opacity-90 transition"
+                    className="cursor-pointer w-full lg:w-1/2 hover:opacity-90 transition rounded-xl bg-main-orange text-button-text px-2 py-3 text-2xl font-[100]"
                 >
                     Забронируй уже сейчас!
                 </button>

@@ -5,11 +5,12 @@ type InputProps = {
     type?: string; 
     name: string; 
     value: string; 
+		placeholder?: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 		errorMessage?: string | null; 
 };
 
-function InputComponent({ text, type = 'input', name, value, onChange, errorMessage }: InputProps) {
+function InputComponent({ text, type = 'input', name, value, onChange, errorMessage, placeholder = '' }: InputProps) {
     const commonClasses = 'w-full border-2 border-main-orange rounded-xl py-2 px-3 ';
 
     return (
@@ -31,6 +32,7 @@ function InputComponent({ text, type = 'input', name, value, onChange, errorMess
                     type="text" 
                     name={name} 
                     value={value} 
+										placeholder={placeholder}
                     onChange={onChange} 
                     className={`${commonClasses} text-2xl`}
                 />

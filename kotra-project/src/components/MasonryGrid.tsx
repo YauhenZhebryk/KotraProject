@@ -57,7 +57,7 @@ const MasonryGrid: React.FC<MasonryGridProps> = ({ images }) => {
           onClick={closeModal}
         >
           <div
-            className="relative h-full flex justify-center items-center"
+            className="max-w-[90vw] max-h-[90vh] object-contain rounded-xl cursor-default relative"
             onClick={(e) => e.stopPropagation()}
           >
             <img
@@ -68,7 +68,7 @@ const MasonryGrid: React.FC<MasonryGridProps> = ({ images }) => {
             
             <button
               onClick={closeModal}
-              className="absolute bottom-[90vh] -right-6 size-12 text-button-text text-5xl z-10 hover:text-main-orange hover:bg-button-text transition-colors flex justify-center items-center rounded-full bg-main-orange"
+              className="hidden lg:block absolute bottom-[90vh] -right-6 -top-6 size-12 text-button-text text-5xl z-10 hover:text-main-orange hover:bg-button-text transition-colors flex justify-center items-center rounded-full bg-main-orange"
               aria-label="Close image"
             >
               <span className='mb-[5px]'>&times;</span>

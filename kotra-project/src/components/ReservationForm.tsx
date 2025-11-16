@@ -125,6 +125,7 @@ function ReservationForm() {
 									name="phone"
 									value={formData.phone}
 									onChange={handleChange}
+									placeholder='+375__________'
 									errorMessage={messageType === 'phone' ? message : null}
 							/>
                     </div>

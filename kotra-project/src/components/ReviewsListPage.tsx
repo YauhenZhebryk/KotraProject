@@ -21,8 +21,6 @@ function ReviewsListPage() {
     const fetchReviews = async () => {
       setLoading(true);
       try {
-        // First try same-origin API. In dev setups this can return the Vite index.html
-        // (text/html) if the backend isn't running or a proxy isn't configured.
         const tryFetch = async (url: string) => {
           const r = await fetch(url);
           const ct = r.headers.get('content-type') || '';
@@ -109,7 +107,7 @@ function ReviewsListPage() {
         {error && <p className="text-red-600">{error}</p>}
 
         {!loading && !error && (
-          <div className="grid gap-6">
+          <div className="flex flex-col gap-6">
             {reviews.length === 0 && <p>Пока нет отзывов.</p>}
             {reviews.map((r) => (
               <Comment

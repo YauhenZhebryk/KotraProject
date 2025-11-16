@@ -1,7 +1,7 @@
 import express from "express";
 import axios from "axios";
 
-const router = express.Router();
+const reservationRouter = express.Router();
 
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
@@ -18,7 +18,7 @@ const validateForm = (data) => {
   return null;
 };
 
-router.post("/reservation", async (req, res) => {
+reservationRouter.post("/reservation", async (req, res) => {
   const error = validateForm(req.body);
 
   if (error) {
@@ -28,10 +28,10 @@ router.post("/reservation", async (req, res) => {
   const { name, phone, description } = req.body;
 
   const message = `
-📩 *Новая заявка с сайта*:
-👤 Имя: ${name}
-📞 Телефон: ${phone}
-📝 Описание: ${description}
+📩 *Бронирование*:
+👤 ${name}
+📞 ${phone}
+📝 ${description}
   `;
 
   try {
@@ -50,4 +50,4 @@ router.post("/reservation", async (req, res) => {
   }
 });
 
-export default router;
+export { reservationRouter };

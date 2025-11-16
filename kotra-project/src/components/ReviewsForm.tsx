@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import InputComponent from './InputComponent';
 import MainButton from './MainButton';
 import Stars from './Stars';
+import Lighter from './Lighter';
 
 type FormData = {
   name: string;
@@ -122,6 +123,7 @@ function ReservationForm() {
 				<form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
                     <div className="relative w-full bg-footer-bg rounded-xl p-3 lg:p-6 lg:col-start-2 lg:row-start-1 lg:flex lg:items-center  ">
+						{/* <Lighter position="top-[-180px] left-70" size="440"/> */}
                         <p className="text-[20px] text-main-text leading-7 ">
                             Мы ценим ваше мнение и будем благодарны, если вы поделитесь своими впечатлениями! Ваш отзыв поможет другим пользователям сделать правильный выбор, а нам — улучшать качество сервиса и развиваться дальше!
                         </p>
@@ -154,7 +156,7 @@ function ReservationForm() {
 								Оценка</span>
 							<Stars currentRate={formData.rate} onRate={handleRate} />
 							{messageType === "rate" && (
-								<p className="text-red-500 text-sm mt-1">{message}</p>
+								<p className="text-sm mt-1">{message}</p>
 							)}
 						</div>
                         <InputComponent

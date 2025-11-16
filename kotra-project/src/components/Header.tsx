@@ -6,7 +6,7 @@ import ThemeSwitcher from './ThemeSwitcher';
 import { getInitialTheme } from '../utils/theme';
 
 
-function HeaderComponent() {
+function Header() {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isDark, setIsDark] = useState<boolean>(getInitialTheme);
@@ -51,7 +51,7 @@ function HeaderComponent() {
 
   return (
     <header className={`sticky top-0 z-50 w-full  bg-main-bg  transition-transform duration-500 lg:border-b-1 lg:border-main-text
-		ease-in-out ${showHeader ? 'translate-y-0' : '-translate-y-full'}`}>
+		ease-in-out ${showHeader ? 'lg:translate-y-0' : 'lg:-translate-y-full translate-y-0'}`}>
 			<div className='w-full flex flex-col items-center lg:flex-row  lg:max-w-6xl m-auto lg:px-5 '>
 				<Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
 					<img 
@@ -90,4 +90,4 @@ function HeaderComponent() {
   );
 }
 
-export default HeaderComponent;
+export default Header;

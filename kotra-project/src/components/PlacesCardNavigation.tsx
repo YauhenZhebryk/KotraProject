@@ -8,7 +8,7 @@ import TerritoryaNav from '../assets/images/mainPhotos/territorywebp/territory_6
 import { useNavigate } from 'react-router-dom'
 
 
-function PlaceNavigation() {
+function PlacesCardNavigation() {
     const navigate = useNavigate()
     return (
         <div className='my-5'>
@@ -37,4 +37,4 @@ function PlaceNavigation() {
     )
 }
 
-export default PlaceNavigation
+export default PlacesCardNavigation

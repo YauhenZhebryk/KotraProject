@@ -120,7 +120,7 @@ function ReservationForm() {
 									errorMessage={messageType === 'name' ? message : null}
 									
 							/>
-				<InputComponent
+						<InputComponent
 									text="Телефон"
 									name="phone"
 									value={formData.phone}

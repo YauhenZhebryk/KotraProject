@@ -1,4 +1,4 @@
-import PlaceShortInformation from './PlaceShortInformation'
+import ShortPlaceInfo from './ShortPlaceInfo'
 
 import house1 from '../assets/images/mainPhotos/housewebp/house_outside_7.webp' 
 import house2 from '../assets/images/mainPhotos/housewebp/house_outside_3.webp' 
@@ -22,10 +22,10 @@ import territory4 from '../assets/images/mainPhotos/territorywebp/territory_1.we
 
 
 
-function AllPlacesMainPage() {
+function AllShortPlacesInfo() {
 	return (
 		<>
-			<PlaceShortInformation
+			<ShortPlaceInfo
 				side='l'
 				id="house"
 				name="Гостевой дом"
@@ -38,7 +38,7 @@ function AllPlacesMainPage() {
 				]}
 				linkto="/guest_house"
 			/>
-			<PlaceShortInformation
+			<ShortPlaceInfo
 				side='r'
 				id="bath"
 				name="Банный комплекс"
@@ -51,7 +51,7 @@ function AllPlacesMainPage() {
 				]}
 				linkto="/bath_house"
 			/>
-			<PlaceShortInformation
+			<ShortPlaceInfo
 				side='l'
 				id="hall"
 				name="Банкетный зал"
@@ -65,7 +65,7 @@ function AllPlacesMainPage() {
 				]}
 				linkto="/banquet_hall"
 			/>
-			<PlaceShortInformation
+			<ShortPlaceInfo
 				side='r'
 				id="territory"
 				name="Территория"
@@ -82,4 +82,4 @@ function AllPlacesMainPage() {
 	)
 }
 
-export default AllPlacesMainPage
+export default AllShortPlacesInfo

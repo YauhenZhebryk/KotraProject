@@ -4,7 +4,7 @@ import MainButton from './MainButton';
 import { ImageSlider } from './ImageSlider';
 import Lighter from './Lighter';
 
-interface PlaceShortInformationProps {
+interface ShortPlaceInfoProps {
 	side: string
 	id: string
 	name: string
@@ -40,7 +40,7 @@ const ChevronSvg = () => (
   </svg>
 );
 
-function PlaceShortInformation({ side, id, name, info, images = myImages, linkto }: PlaceShortInformationProps) {
+function ShortPlaceInfo({ side, id, name, info, images = myImages, linkto }: ShortPlaceInfoProps) {
 	if (side === 'l'){
 		return (
 			<div className='my-16'>
@@ -99,4 +99,4 @@ function PlaceShortInformation({ side, id, name, info, images = myImages, linkto
 	}
 }
 
-export default PlaceShortInformation
+export default ShortPlaceInfo

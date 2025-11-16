@@ -1,6 +1,6 @@
-import HeaderComponent from "./HeaderComponent"
+import Header from "./Header"
 import Footer from "./Footer"
-import PlaceFullInformation from "./PlaceFullInformation"
+import FullPlaceInfo from "./FullPlaceInfo"
 import { useEffect } from "react";
 
 type PlaceProps = {
@@ -10,19 +10,19 @@ type PlaceProps = {
 	images? : string[];
 }
 
-function PlacePage ({id, name, info, images = []}: PlaceProps) {
+function FullPlaceInfoPage ({id, name, info, images = []}: PlaceProps) {
 	useEffect(() => {
 			window.scrollTo(0, 0);
 		}, []);
   return (
 	<div>
-		<HeaderComponent />
+		<Header />
 		<div className="lg:px-30 xl:px-40">
-			<PlaceFullInformation id={id} name={name} info={info } images={images} />
+			<FullPlaceInfo id={id} name={name} info={info } images={images} />
 		</div>
 		<Footer />
 	</div>
   )
 }
 
-export default PlacePage
+export default FullPlaceInfoPage

@@ -2,7 +2,7 @@ import DottedLine from './DottedLine'
 import { useNavigate } from 'react-router-dom'
 import MasonryGrid from './MasonryGrid'
 
-interface PlaceFullInformationProps {
+interface FullPlaceInfoProps {
     id : string
     name: string
     info: string
@@ -10,7 +10,7 @@ interface PlaceFullInformationProps {
 }
 
 
-function PlaceFullInformation({ id, name, info, images = []}: PlaceFullInformationProps) {
+function FullPlaceInfo({ id, name, info, images = []}: FullPlaceInfoProps) {
 
     const navigate = useNavigate()
 
@@ -45,4 +45,4 @@ function PlaceFullInformation({ id, name, info, images = []}: PlaceFullInformati
     )
 }
 
-export default PlaceFullInformation
+export default FullPlaceInfo

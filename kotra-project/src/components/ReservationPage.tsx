@@ -1,4 +1,4 @@
-import HeaderComponent from "./HeaderComponent";
+import Header from "./Header";
 import Footer from "./Footer";
 import { useEffect } from "react";
 import ReservationForm from "./ReservationForm";
@@ -9,10 +9,10 @@ function ReservationPage() {
     }, []);
     return (
         <>
-            <HeaderComponent />
+            <Header />
             <div className="px-4 lg:max-w-6xl m-auto lg:px-5">
-							<ReservationForm/>
-						</div>
+				<ReservationForm/>
+			</div>
             <Footer />
         </>
     )

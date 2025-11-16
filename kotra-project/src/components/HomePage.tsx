@@ -1,25 +1,25 @@
 
-import PlaceNavigation from './PlaceNavigation'
-import HeaderComponent from './HeaderComponent'
-import AllPlacesMainPage from './PlacesReviewPhone'
-import CommentSection from './CommentSection'
+import PlacesCardNavigation from './PlacesCardNavigation'
+import Header from './Header'
+import AllShortPlacesInfoMainPage from './AllShortPlacesInfo'
+import CommentsSection from './CommentsSection'
 import Footer from './Footer'
 import Preview from './Preview'
 
 function HomePage() {
 	return (
 		<>
-			<HeaderComponent />
+			<Header />
 			<div className='px-4 lg:max-w-6xl m-auto lg:px-5'>
 				<div className='w-full'>
 					<div className='hidden lg:block my-8'>
 						<Preview />
 					</div>
 					<div className='block lg:hidden'>
-						<PlaceNavigation />
+						<PlacesCardNavigation />
 					</div>
-					<AllPlacesMainPage />
-					<CommentSection />
+					<AllShortPlacesInfoMainPage />
+					<CommentsSection />
 				</div>
 			</div>
 			<Footer />

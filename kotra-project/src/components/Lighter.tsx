@@ -12,7 +12,7 @@ function Lighter({position = '', size = '450'} : LighterProps) {
 	return (
 		<div
 			style={lighterStyle}
-			className={`absolute bg-main-orange/10 rounded-full blur-3xl ${position}`}
+			className={`absolute bg-main-orange/15 rounded-full blur-3xl ${position}`}
 		></div>
 	);
 }

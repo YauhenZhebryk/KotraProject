@@ -28,7 +28,7 @@ function Footer() {
 
 	return (
 		<div className="bg-footer-bg text-main-text">
-			<div className="p-5 pb-16 lg:pb-5 space-y-4 mt-10 text-xl lg:max-w-6xl m-auto lg:px-5">
+			<div className="p-5 pb-12 lg:pb-8 space-y-4 mt-10 text-xl lg:max-w-6xl m-auto lg:px-5">
 
 				<h2 className="text-footer-text">Контакты</h2>
 

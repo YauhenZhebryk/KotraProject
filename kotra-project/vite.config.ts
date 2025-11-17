@@ -11,6 +11,7 @@ export default defineConfig({
 		react(),
 		qrcode() 
 	],
+	base : "/KotraProject/",
 	server: {
     port: 5175, 
   },

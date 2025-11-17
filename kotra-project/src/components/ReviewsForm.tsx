@@ -154,6 +154,7 @@ function ReviewsForm() {
 							value={formData.phone}
 							onChange={handleChange}
 							errorMessage={messageType === 'phone' ? message : null}
+							help='Пример ввода: +375ХХХХХХХХХ'
 						/>
                     </div>
 

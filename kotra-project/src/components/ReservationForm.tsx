@@ -127,6 +127,7 @@ function ReservationForm() {
 									onChange={handleChange}
 									placeholder='+375__________'
 									errorMessage={messageType === 'phone' ? message : null}
+									help="Пример ввода: +375XXXXXXXXX"
 							/>
                     </div>
 

@@ -1,13 +1,6 @@
 import { useEffect, useState } from 'react';
-import MainButton from "./MainButton"
 import Comment from "./Comment"
 import { Link } from 'react-router-dom';
-
-const Svg = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-		<path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-	</svg>
-);
 
 
 type Review = {
@@ -36,7 +29,6 @@ function CommentsSection() {
 			try {
 				const { res, contentType } = await tryFetch('/api/reviews');
 
-				// If dev server responded with HTML (index.html), try direct backend
 						if (contentType.includes('text/html')) {
 							try {
 						const fallback = await tryFetch('http://localhost:5000/api/reviews');
@@ -79,7 +71,6 @@ function CommentsSection() {
 		fetchReviews();
 	}, []);
 
-	// helper: pick up to n random items from array
 		const pickRandom = (arr: Review[], n: number) => {
 		const copy = arr.slice();
 		for (let i = copy.length - 1; i > 0; i--) {
@@ -89,7 +80,6 @@ function CommentsSection() {
 		return copy.slice(0, n);
 	};
 
-	// Filter reviews with rate 4 or 5
 	const goodReviews = reviews && reviews.length > 0 ? reviews.filter(r => Number(r.rate) >= 4) : [];
 	const shown = goodReviews.length > 0 ? pickRandom(goodReviews, 3) : null;
 
@@ -105,7 +95,6 @@ function CommentsSection() {
 				))}
 
 				{!loading && (!shown || shown.length === 0) && (
-					// fallback to static examples if no reviews available
 					<>
 						<Comment name="Николай" rate={5} text='Отличное место для отдыха! Тихая природа, уютный дом и шикарная баня. Провели здесь выходные — перезагрузились на 100%. Обязательно вернёмся!' data='14.06.2024' />
 						<Comment name="Виктория" rate={5} text='Приезжали компанией — всем очень понравилось. Территория ухоженная, вокруг лес и свежий воздух. Рекомендуем!' data='14.06.2024' />

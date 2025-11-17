@@ -32,6 +32,7 @@ function InputComponent({ text, type = 'input', name, value, onChange, errorMess
                     id={name} 
                     type="text" 
                     name={name} 
+										placeholder={placeholder}
                     value={value} 
                     onChange={onChange} 
                     className={`${commonClasses} text-2xl`}

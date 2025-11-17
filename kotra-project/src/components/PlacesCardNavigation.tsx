@@ -5,11 +5,7 @@ import BanyaNav from '../assets/images/mainPhotos/banyawebp/sauna.webp'
 import ZalNav from '../assets/images/mainPhotos/hallwebp/hall_11.webp'
 import TerritoryaNav from '../assets/images/mainPhotos/territorywebp/territory_6.webp'
 
-import { useNavigate } from 'react-router-dom'
-
-
 function PlacesCardNavigation() {
-    const navigate = useNavigate()
     return (
         <div className='my-5'>
 

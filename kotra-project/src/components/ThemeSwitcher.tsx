@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, type SVGProps } from 'react';
 import {Switch} from "@heroui/react";
 import { getInitialTheme } from '../utils/theme';
-export const MoonIcon = (props) => {
+export const MoonIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       aria-hidden="true"
@@ -20,7 +20,7 @@ export const MoonIcon = (props) => {
   );
 };
 
-export const SunIcon = (props) => {
+export const SunIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       aria-hidden="true"

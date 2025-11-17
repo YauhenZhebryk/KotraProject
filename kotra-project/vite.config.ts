@@ -11,6 +11,9 @@ export default defineConfig({
 		react(),
 		qrcode() 
 	],
+	build: {
+    chunkSizeWarningLimit: 1000
+  },
 	base : "/KotraProject/",
 	server: {
     port: 5175, 

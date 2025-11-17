@@ -45,7 +45,7 @@ function ReservationForm() {
 		}
     if (!formData.phone.trim() || !/^\+?\d{7,15}$/.test(formData.phone)){
 			setMessageType('phone')
-      return 'Введите корректный номер телефона (например, +79XXXXXXXXX)';
+      return 'Введите корректный номер телефона с кодом (+375XXXXXXXXX)';
 		}
     if (!formData.description.trim() || formData.description.length < 5){
 			setMessageType('description');
